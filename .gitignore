@@ -1,1 +1,9 @@
+###############################################
+### Files ignored by Git not added to Github ##
+###############################################
+
 .DS_Store
+a19frelu_artefakt.html
+Foton/
+*.json
+reNameNode.js
