@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hello World!</title>
 
     <!-- ######## Bootstrap CSS ######## -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -18,6 +19,9 @@
         background-color: #002984;
         height: 70px;
       }
+      h1 {
+        color: rgb(61, 209, 61);
+      }
       h2 {
         padding-bottom: 20px;
       }
@@ -27,188 +31,181 @@
       .nav-link {
         color: rgb(254, 254, 254);
       }
+      
     </style>
 
-    <title>Hello world!</title>
+    <script type="text/javascript">
+      function showPage(p){
+        // Step 1 - Hide all pages
+        pageArr=document.getElementsByClassName("page");
+        for(let i=0;i<pageArr.length;i++){
+          let page=pageArr[i];
+          page.style.display="none";
+        }
+        // Step 2 - Show the selected page
+        document.getElementById("page"+p).style.display="block";
+
+        console.log("Sida ett visas på inladdning.")
+      }
+      function init () {
+        showPage (1);
+      }
+    </script>
+
   </head>
-  <body>
-     <!-- Bootstrap navbar-->
+  <body onload="init();">
+     <!-- ########################## ------------------------ Bootstrap navbar ------------------------ ########################## -->
     <ul class="nav justify-content-center">
       <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="#">Art</a>
+        <a class="nav-link active" aria-current="page" onclick="showPage(1);" href="#Art">Art</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Links</a>
+        <a class="nav-link" onclick="showPage(2);" href="#Links">Links</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">About</a>
+        <a class="nav-link" onclick="showPage(3)" href="#About">About</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link disabled">Disabled unused</a>
+        <a class="nav-link" onclick="showPage(4)" href="#Licenses">Licenses</a>
       </li>
     </ul>
-    <!--##### Start of page1_art #####-->
-    <div class="page1_art">
+    <!-- ########################## ------------------------ Bootstrap navbar end --------------------- ########################## -->
+    
+    <div class="container"> <!--##### Start of container ##### -->
+      <div id="page1" class="page"> <!--##### Start of page 1 ##### -->
 
-      <h2 id="first_batch" style="color: #fff;">First batch of photos below</h2>
+        <h2 id="first_batch" style="color: #fff;">First batch of photos below</h2>
+  
+        <div class="row"> <!-- Grid row start -->
+          <div class="col-lg-4 col-md-12 mb-4"> <!-- Start of grid column -->
+            <img src="../Foton/DJI_MAVIC_2_PRO/DJI_2.jpg" class="img-fluid mb-4" alt="">
+            <img src="../Foton/DJI_MAVIC_2_PRO/DJI_3.jpg" class="img-fluid mb-4" alt=""
+              data-wow-delay="0.3s">
+          </div> <!-- End of grid column -->
 
-          <!--Grid row start-->
-      <div class="row">
+          <div class="col-lg-4 col-md-6 mb-4">  <!-- Start of grid column -->
+            <img src="../Foton/DJI_MAVIC_2_PRO/DJI_4.jpg" class="img-fluid mb-4" alt=""
+              data-wow-delay="0.1s">
+            <img src="../Foton/DJI_MAVIC_2_PRO/DJI_5.jpg" class="img-fluid mb-4" alt=""
+              data-wow-delay="0.4s">
+          </div>  <!-- End of grid column -->
+        
+          <div class="col-lg-4 col-md-6 mb-4"> <!-- Start of grid column -->
+            <img src="../Foton/DJI_MAVIC_2_PRO/DJI_6.jpg" class="img-fluid mb-4" alt=""
+              data-wow-delay="0.2s">
+            <img src="../Foton/DJI_MAVIC_2_PRO/DJI_7.jpg" class="img-fluid mb-4" alt=""
+              data-wow-delay="0.5s">
+          </div> <!-- End of grid column -->
+        </div> <!-- Grid row end -->
+        
+        <h2 style="color: #fff;">Second batch of photos below</h2>
 
-        <!--Start of grid column-->
-        <div class="col-lg-4 col-md-12 mb-4">
+        <div class="row"> <!-- Grid row start -->
+          <div class="col-lg-4 col-md-12 mb-4"> <!-- Start of grid column -->
+            <img src="../Foton/DJI_MAVIC_2_PRO/DJI_8.jpg" class="img-fluid mb-4" alt="">
+            <img src="../Foton/DJI_MAVIC_2_PRO/DJI_9.jpg" class="img-fluid mb-4" alt=""
+              data-wow-delay="0.3s">
+          </div> <!--  End of grid column -->
 
-          <img src="../Foton/DJI_MAVIC_2_PRO/DJI_2.jpg" class="img-fluid mb-4" alt="">
-          <img src="../Foton/DJI_MAVIC_2_PRO/DJI_3.jpg" class="img-fluid mb-4" alt=""
-            data-wow-delay="0.3s">
+          <div class="col-lg-4 col-md-6 mb-4"> <!-- Start of grid column -->
+            <img src="../Foton/DJI_MAVIC_2_PRO/DJI_10.jpg" class="img-fluid mb-4" alt=""
+              data-wow-delay="0.1s">
+            <img src="../Foton/DJI_MAVIC_2_PRO/DJI_12.jpg" class="img-fluid mb-4" alt=""
+              data-wow-delay="0.4s">
+          </div> <!-- End of grid column -->
 
-        </div>
-        <!-- ^ End of grid column-->
+          <div class="col-lg-4 col-md-6 mb-4"> <!-- Start of grid column -->
+            <img src="../Foton/DJI_MAVIC_2_PRO/DJI_13.jpg" class="img-fluid mb-4" alt=""
+              data-wow-delay="0.2s">
+            <img src="../Foton/DJI_MAVIC_2_PRO/DJI_14.jpg" class="img-fluid mb-4" alt=""
+              data-wow-delay="0.5s">
+          </div> <!-- End of grid column -->
+        </div> <!-- Grid row end -->
 
-        <!--Start of grid column-->
-        <div class="col-lg-4 col-md-6 mb-4">
-
-          <img src="../Foton/DJI_MAVIC_2_PRO/DJI_4.jpg" class="img-fluid mb-4" alt=""
-            data-wow-delay="0.1s">
-          <img src="../Foton/DJI_MAVIC_2_PRO/DJI_5.jpg" class="img-fluid mb-4" alt=""
-            data-wow-delay="0.4s">
-
-        </div>
-        <!-- ^ End of grid column-->
-
-        <!--Start of grid column-->
-        <div class="col-lg-4 col-md-6 mb-4">
-
-          <img src="../Foton/DJI_MAVIC_2_PRO/DJI_6.jpg" class="img-fluid mb-4" alt=""
-            data-wow-delay="0.2s">
-          <img src="../Foton/DJI_MAVIC_2_PRO/DJI_7.jpg" class="img-fluid mb-4" alt=""
-            data-wow-delay="0.5s">
-
-        </div>
-        <!-- ^ End of grid column-->
-
-      </div>
-      <!-- ^ Grid row end-->
-
-      <h2 style="color: #fff;">Second batch of photos below</h2>
-
-      <!--Grid row start-->
-      <div class="row">
-        <!--Start of grid column-->
-        <div class="col-lg-4 col-md-12 mb-4">
-
-          <img src="../Foton/DJI_MAVIC_2_PRO/DJI_8.jpg" class="img-fluid mb-4" alt="">
-          <img src="../Foton/DJI_MAVIC_2_PRO/DJI_9.jpg" class="img-fluid mb-4" alt=""
-            data-wow-delay="0.3s">
-
-        </div>
-        <!-- ^ End of grid column-->
-
-        <!--Start of grid column-->
-        <div class="col-lg-4 col-md-6 mb-4">
-
-          <img src="../Foton/DJI_MAVIC_2_PRO/DJI_10.jpg" class="img-fluid mb-4" alt=""
-            data-wow-delay="0.1s">
-          <img src="../Foton/DJI_MAVIC_2_PRO/DJI_12.jpg" class="img-fluid mb-4" alt=""
-            data-wow-delay="0.4s">
-
-        </div>
-        <!-- ^ End of grid column-->
-
-        <!--Start of grid column-->
-        <div class="col-lg-4 col-md-6 mb-4">
-
-          <img src="../Foton/DJI_MAVIC_2_PRO/DJI_13.jpg" class="img-fluid mb-4" alt=""
-            data-wow-delay="0.2s">
-          <img src="../Foton/DJI_MAVIC_2_PRO/DJI_14.jpg" class="img-fluid mb-4" alt=""
-            data-wow-delay="0.5s">
-
-        </div>
-        <!-- ^ End of grid column-->
-      </div>
-      <!-- ^ Grid row end-->
-
-      <h2 style="color: #fff;">Third batch of photos below</h2>
-      
-        <!--Grid row start-->
-        <div class="row">
-          <!--Start of grid column-->
-          <div class="col-lg-4 col-md-12 mb-4">
-
+        <h2 style="color: #fff;">Third batch of photos below</h2>
+        
+        <div class="row"> <!-- Grid row start -->
+          <div class="col-lg-4 col-md-12 mb-4"> <!-- Start of grid column -->
             <img src="../Foton/DJI_MAVIC_2_PRO/DJI_15.jpg" class="img-fluid mb-4" alt="">
             <img src="../Foton/DJI_MAVIC_2_PRO/DJI_22.jpg" class="img-fluid mb-4" alt=""
               data-wow-delay="0.3s">
+          </div> <!-- End of grid column -->
 
-          </div>
-          <!-- ^ End of grid column-->
-
-          <!--Start of grid column-->
-          <div class="col-lg-4 col-md-6 mb-4">
-
+          <div class="col-lg-4 col-md-6 mb-4"> <!-- Start of grid column -->
             <img src="../Foton/DJI_MAVIC_2_PRO/DJI_18.jpg" class="img-fluid mb-4" alt=""
               data-wow-delay="0.1s">
             <img src="../Foton/DJI_MAVIC_2_PRO/DJI_19.jpg" class="img-fluid mb-4" alt=""
               data-wow-delay="0.4s">
+          </div> <!-- End of grid column -->
 
-          </div>
-          <!-- ^ End of grid column-->
-
-          <!--Start of grid column-->
-          <div class="col-lg-4 col-md-6 mb-4">
-
+          <div class="col-lg-4 col-md-6 mb-4"> <!-- Start of grid column -->
             <img src="../Foton/DJI_MAVIC_2_PRO/DJI_20.jpg" class="img-fluid mb-4" alt=""
               data-wow-delay="0.2s">
             <img src="../Foton/DJI_MAVIC_2_PRO/DJI_21.jpg" class="img-fluid mb-4" alt=""
               data-wow-delay="0.5s">
-
-          </div>
-          <!-- ^ End of grid column-->
-        </div>
-        <!-- ^ Grid row end-->
+          </div> <!-- End of grid column -->
+        </div> <!-- Grid row end -->
 
         <h2 style="color: #fff;">Fourth batch of photos below</h2>
 
-        <!--Grid row start-->
-        <div class="row">
-          <!--Start of grid column-->
-          <div class="col-lg-4 col-md-12 mb-4">
-
+        <div class="row"> <!-- Grid row start -->
+          <div class="col-lg-4 col-md-12 mb-4"> <!-- Start of grid column -->
             <img src="../Foton/DJI_MAVIC_2_PRO/DJI_23.jpg" class="img-fluid mb-4" alt="">
             <img src="../Foton/DJI_MAVIC_2_PRO/DJI_24.jpg" class="img-fluid mb-4" alt=""
               data-wow-delay="0.3s">
+          </div> <!-- End of grid column -->
 
-          </div>
-          <!-- ^ End of grid column-->
-
-          <!--Start of grid column-->
-          <div class="col-lg-4 col-md-6 mb-4">
-
+          <div class="col-lg-4 col-md-6 mb-4"> <!-- Start of grid column -->
             <img src="../Foton/DJI_MAVIC_2_PRO/DJI_25.jpg" class="img-fluid mb-4" alt=""
               data-wow-delay="0.1s">
             <img src="../Foton/DJI_MAVIC_2_PRO/DJI_29.jpg" class="img-fluid mb-4" alt=""
               data-wow-delay="0.4s">
+          </div> <!-- End of grid column -->
 
-          </div>
-          <!-- ^ End of grid column-->
-
-          <!--Start of grid column-->
-          <div class="col-lg-4 col-md-6 mb-4">
-
+          <div class="col-lg-4 col-md-6 mb-4"> <!-- Start of grid column -->
             <img src="../Foton/DJI_MAVIC_2_PRO/DJI_27.jpg" class="img-fluid mb-4" alt=""
               data-wow-delay="0.2s">
             <img src="../Foton/DJI_MAVIC_2_PRO/DJI_28.jpg" class="img-fluid mb-4" alt=""
               data-wow-delay="0.5s">
+          </div> <!-- ^ End of grid column-->
+        </div> <!-- Grid row end-->
+      </div> <!-- #####  End of page 1 #####-->
 
-          </div>
-          <!-- ^ End of grid column-->
-        </div>
-        <!-- ^ Grid row end-->
+      <div id="page2" class="page">
+        <h1>The links will be here soon.</h1>
+      </div>
 
-    </div>
-    <!-- ^ #####  End of page1_art #####-->
+      <div id="page3" class="page">
+        <h1>There is no content here yet, but soon, very soon there will be.</h1>
+      </div>
+
+      <div id="page4" class="page">
+        <h1>Photo licenses will be shown here in a moment.</h1>
+      </div>
+    </div> <!--##### Start of container ##### --> 
 
     <!-- Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
   </body>
+  
+  <footer>
+    <nav aria-label="Page navigation example">
+      <ul class="pagination justify-content-center" style="background-color:#3F51B5;">
+        <li class="page-item">
+          <a class="page-link" href="#" aria-label="Previous">
+            <span aria-hidden="true">&laquo;</span>
+          </a>
+        </li>
+        <li class="page-item active" aria-current="page"><a class="page-link" onclick="showPage(1);">1</a></li>
+        <li class="page-item"><a class="page-link" onclick="showPage(2);">2</a></li>
+        <li class="page-item"><a class="page-link" onclick="showPage(3);">3</a></li>
+        <li class="page-item">
+          <a class="page-link" href="#" aria-label="Next">
+            <span aria-hidden="true">&raquo;</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </footer>
 </html>
