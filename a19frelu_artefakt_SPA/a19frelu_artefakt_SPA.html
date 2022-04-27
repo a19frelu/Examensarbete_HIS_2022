@@ -19,22 +19,31 @@
         background-color: #002984;
         height: 70px;
       }
+      .container {
+        background-color: #8292fa;
+        border-radius: 0px 0px 20px 20px;
+      }
       h1 {
         color: rgb(61, 209, 61);
       }
       h2 {
         padding-bottom: 20px;
       }
-      #first_batch {
+      .top_batch {
         padding-top: 25px;
       }
       .nav-link {
         color: rgb(254, 254, 254);
       }
+      .page-item {
+        padding: 15px;
+        border-radius: 50px;
+      }
       
     </style>
 
     <script type="text/javascript">
+      
       function showPage(p){
         // Step 1 - Hide all pages
         pageArr=document.getElementsByClassName("page");
@@ -50,6 +59,24 @@
       function init () {
         showPage (1);
       }
+
+      function hidePagination() {
+        var pHide = document.getElementById("footContainer");
+        if (pHide.style.display === "block") {
+          pHide.style.display = "none";
+        } else {
+          pHide.style.display = "none";
+        }
+      }
+
+      function showPagination() {
+        var pShow = document.getElementById("footContainer");
+        if (pShow.style.display === "none") {
+          pShow.style.display = "block";
+        } else {
+          pShow.style.display = "none";
+        }
+      } 
     </script>
 
   </head>
@@ -57,24 +84,32 @@
      <!-- ########################## ------------------------ Bootstrap navbar ------------------------ ########################## -->
     <ul class="nav justify-content-center">
       <li class="nav-item">
-        <a class="nav-link active" aria-current="page" onclick="showPage(1);" href="#Art">Art</a>
+        <a class="nav-link active" aria-current="page" onclick="showPagination(); showPage(1);" href="#Art">Art</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" onclick="showPage(2);" href="#Links">Links</a>
+        <a class="nav-link" onclick="hidePagination(); showPage(3)" href="#Links">Links</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" onclick="showPage(3)" href="#About">About</a>
+        <a class="nav-link" onclick="hidePagination(); showPage(4)" href="#About">About</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" onclick="showPage(4)" href="#Licenses">Licenses</a>
+        <a class="nav-link" onclick="hidePagination(); showPage(5)" href="#Licenses">Licenses</a>
       </li>
+
+      <div class="collapse" id="navbarToggleExternalContent">
+        <div class="bg-dark p-4">
+          <h5 class="text-white h4">Collapsed content</h5>
+          <span class="text-muted">Toggleable via the navbar brand.</span>
+        </div>
+      </div>
     </ul>
+
     <!-- ########################## ------------------------ Bootstrap navbar end --------------------- ########################## -->
     
     <div class="container"> <!--##### Start of container ##### -->
       <div id="page1" class="page"> <!--##### Start of page 1 ##### -->
 
-        <h2 id="first_batch" style="color: #fff;">First batch of photos below</h2>
+        <h2 class="top_batch" style="color: #fff;">First batch of photos below</h2>
   
         <div class="row"> <!-- Grid row start -->
           <div class="col-lg-4 col-md-12 mb-4"> <!-- Start of grid column -->
@@ -121,8 +156,10 @@
               data-wow-delay="0.5s">
           </div> <!-- End of grid column -->
         </div> <!-- Grid row end -->
+      </div> <!-- #####  End of page 1 #####-->
 
-        <h2 style="color: #fff;">Third batch of photos below</h2>
+      <div id="page2" class="page"> <!--##### Start of page 2 ##### -->
+        <h2 class="top_batch" style="color: #fff;">Third batch of photos below</h2>
         
         <div class="row"> <!-- Grid row start -->
           <div class="col-lg-4 col-md-12 mb-4"> <!-- Start of grid column -->
@@ -169,17 +206,17 @@
               data-wow-delay="0.5s">
           </div> <!-- ^ End of grid column-->
         </div> <!-- Grid row end-->
-      </div> <!-- #####  End of page 1 #####-->
+      </div> <!-- #####  End of page 2 #####-->
 
-      <div id="page2" class="page">
+      <div id="page3" class="page">
         <h1>The links will be here soon.</h1>
       </div>
 
-      <div id="page3" class="page">
+      <div id="page4" class="page">
         <h1>There is no content here yet, but soon, very soon there will be.</h1>
       </div>
 
-      <div id="page4" class="page">
+      <div id="page5" class="page">
         <h1>Photo licenses will be shown here in a moment.</h1>
       </div>
     </div> <!--##### Start of container ##### --> 
@@ -190,22 +227,16 @@
   </body>
   
   <footer>
-    <nav aria-label="Page navigation example">
-      <ul class="pagination justify-content-center" style="background-color:#3F51B5;">
-        <li class="page-item">
-          <a class="page-link" href="#" aria-label="Previous">
-            <span aria-hidden="true">&laquo;</span>
-          </a>
-        </li>
-        <li class="page-item active" aria-current="page"><a class="page-link" onclick="showPage(1);">1</a></li>
-        <li class="page-item"><a class="page-link" onclick="showPage(2);">2</a></li>
-        <li class="page-item"><a class="page-link" onclick="showPage(3);">3</a></li>
-        <li class="page-item">
-          <a class="page-link" href="#" aria-label="Next">
-            <span aria-hidden="true">&raquo;</span>
-          </a>
-        </li>
-      </ul>
-    </nav>
+    <div id="footContainer">
+      <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center" style="background-color:#3F51B5;">
+          <li class="page-item" aria-current="page" onclick="showPage(1);"><a class="page-link">1</a></li>
+          <li class="page-item" onclick="showPage(2);"><a class="page-link">2</a></li>
+          <li class="page-item"><a class="page-link">3</a></li>
+          <li class="page-item"><a class="page-link">4</a></li>
+          <li class="page-item"><a class="page-link">5</a></li>
+        </ul>
+      </nav>
+    </div>
   </footer>
 </html>
