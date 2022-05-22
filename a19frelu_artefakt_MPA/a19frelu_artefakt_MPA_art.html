@@ -12,196 +12,173 @@
     <link rel="stylesheet" href="MPA_stylesheet.css">
     <script src="MPA_scriptsheet.js"></script>
 
-    <title>Hello, world!</title>
+    <title>MPA Art</title>
   </head>
   <body onload="init();">
     <!-- ########################## ------------------------ Bootstrap navbar ------------------------ ########################## -->
-   <ul class="nav justify-content-center">
-     <li class="nav-item">
-       <a class="nav-link active" aria-current="page" onclick="showPagination(); showPage(1);" href="#Art">Art</a>
-     </li>
-     <li class="nav-item">
-       <a class="nav-link" onclick="hidePagination(); showPage(4)" href="#Links">Links</a>
-     </li>
-     <li class="nav-item">
-       <a class="nav-link" onclick="hidePagination(); showPage(5)" href="#About">About</a>
-     </li>
-     <li class="nav-item">
-       <a class="nav-link" onclick="hidePagination(); showPage(6)" href="#Licenses">Licenses</a>
-     </li>
+    <ul class="nav justify-content-center">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" onclick="showPagination(); showPage(1);" href="art.html">Arts</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" onclick="hidePagination(); showPage(4)" href="links.html">Links</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" onclick="hidePagination(); showPage(5)" href="about.html">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" onclick="hidePagination(); showPage(6)" href="licenses.html">Licenses</a>
+      </li>
 
-     <div class="collapse" id="navbarToggleExternalContent">
-       <div class="bg-dark p-4">
-         <h5 class="text-white h4">Collapsed content</h5>
-         <span class="text-muted">Toggleable via the navbar brand.</span>
-       </div>
-     </div>
-   </ul>
-
-   <!-- ########################## ------------------------ Bootstrap navbar end --------------------- ########################## -->
+      <div class="collapse" id="navbarToggleExternalContent">
+        <div class="bg-dark p-4">
+          <h5 class="text-white h4">Collapsed content</h5>
+          <span class="text-muted">Toggleable via the navbar brand.</span>
+        </div>
+      </div>
+    </ul>
+    <!-- ########################## ------------------------ Bootstrap navbar end --------------------- ########################## -->
    
-   <div class="container"> <!--##### Start of container ##### -->
-     <div id="page1" class="page"> <!--##### Start of page 1 ##### -->
+    <div class="container"> <!--##### Start of container ##### -->
+      <div id="page1" class="page"> <!--##### Start of page 1 ##### -->
 
-       <h4 class="top_batch">Welcome to the gallery of photos</h4>
- 
-       <div class="row"> <!-- Grid row start -->
-         <div class="col-lg-3 col-md-12 mb-3"> <!-- Start of grid column -->
-           <img src="../Foton/DJI_MAVIC_2_PRO/DJI_2.jpg" class="photo img-fluid mb-3" alt="">
-           <img src="../Foton/DJI_MAVIC_2_PRO/DJI_3.jpg" class="photo img-fluid mb-3" alt="">
-           <img src="../Foton/DJI_MAVIC_2_PRO/DJI_4.jpg" class="photo img-fluid mb-3" alt="">
-         </div> <!-- End of grid column -->
+        <h4 class="top_batch">Welcome to the gallery of photos</h4>
+  
+        <div class="row"> <!-- Grid row start -->
+          <div class="col-lg-3 col-md-12 mb-3"> <!-- Start of grid column -->
+            <img src="../Foton/DJI_MAVIC_2_PRO/DJI_2.jpg" class="photo img-fluid mb-3" alt="">
+            <img src="../Foton/DJI_MAVIC_2_PRO/DJI_3.jpg" class="photo img-fluid mb-3" alt="">
+            <img src="../Foton/DJI_MAVIC_2_PRO/DJI_4.jpg" class="photo img-fluid mb-3" alt="">
+          </div> <!-- End of grid column -->
 
-         <div class="col-lg-3 col-md-6 mb-3">  <!-- Start of grid column -->
-           <img src="../Foton/DJI_MAVIC_2_PRO/DJI_5.jpg" class="photo img-fluid mb-3" alt="">
-           <img src="../Foton/DJI_MAVIC_2_PRO/DJI_6.jpg" class="photo img-fluid mb-3" alt="">
-           <img src="../Foton/DJI_MAVIC_2_PRO/DJI_7.jpg" class="photo img-fluid mb-3" alt="">
-         </div>  <!-- End of grid column -->
-       
-         <div class="col-lg-3 col-md-6 mb-3"> <!-- Start of grid column -->
-           <img src="../Foton/DJI_MAVIC_2_PRO/DJI_8.jpg" class="photo img-fluid mb-3" alt="">
-           <img src="../Foton/DJI_MAVIC_2_PRO/DJI_9.jpg" class="photo img-fluid mb-3" alt="">
-           <img src="../Foton/DJI_MAVIC_2_PRO/DJI_10.jpg" class="photo img-fluid mb-3" alt="">
-         </div> <!-- End of grid column -->
+          <div class="col-lg-3 col-md-6 mb-3">  <!-- Start of grid column -->
+            <img src="../Foton/DJI_MAVIC_2_PRO/DJI_5.jpg" class="photo img-fluid mb-3" alt="">
+            <img src="../Foton/DJI_MAVIC_2_PRO/DJI_6.jpg" class="photo img-fluid mb-3" alt="">
+            <img src="../Foton/DJI_MAVIC_2_PRO/DJI_7.jpg" class="photo img-fluid mb-3" alt="">
+          </div>  <!-- End of grid column -->
+        
+          <div class="col-lg-3 col-md-6 mb-3"> <!-- Start of grid column -->
+            <img src="../Foton/DJI_MAVIC_2_PRO/DJI_8.jpg" class="photo img-fluid mb-3" alt="">
+            <img src="../Foton/DJI_MAVIC_2_PRO/DJI_9.jpg" class="photo img-fluid mb-3" alt="">
+            <img src="../Foton/DJI_MAVIC_2_PRO/DJI_10.jpg" class="photo img-fluid mb-3" alt="">
+          </div> <!-- End of grid column -->
 
-         <div class="col-lg-3 col-md-6 mb-3"> <!-- Start of grid column -->
-           <img src="../Foton/DJI_MAVIC_2_PRO/DJI_12.jpg" class="photo img-fluid mb-3" alt="">
-           <img src="../Foton/DJI_MAVIC_2_PRO/DJI_13.jpg" class="photo img-fluid mb-3" alt="">
-           <img src="../Foton/DJI_MAVIC_2_PRO/DJI_14.jpg" class="photo img-fluid mb-3" alt="">
-         </div> <!-- End of grid column -->
-       </div> <!-- Grid row end -->
+          <div class="col-lg-3 col-md-6 mb-3"> <!-- Start of grid column -->
+            <img src="../Foton/DJI_MAVIC_2_PRO/DJI_12.jpg" class="photo img-fluid mb-3" alt="">
+            <img src="../Foton/DJI_MAVIC_2_PRO/DJI_13.jpg" class="photo img-fluid mb-3" alt="">
+            <img src="../Foton/DJI_MAVIC_2_PRO/DJI_14.jpg" class="photo img-fluid mb-3" alt="">
+          </div> <!-- End of grid column -->
+        </div> <!-- Grid row end -->
 
-       <div class="row"> <!-- Grid row start -->
-         <div class="col-lg-3 col-md-12 mb-3"> <!-- Start of grid column -->
-           <img src="../Foton/DJI_MAVIC_2_PRO/DJI_15.jpg" class="photo img-fluid mb-3" alt="">
-           <img src="../Foton/DJI_MAVIC_2_PRO/DJI_18.jpg" class="photo img-fluid mb-3" alt="">
-           <img src="../Foton/DJI_MAVIC_2_PRO/DJI_19.jpg" class="photo img-fluid mb-3" alt="">
-         </div> <!-- End of grid column -->
+        <div class="row"> <!-- Grid row start -->
+          <div class="col-lg-3 col-md-12 mb-3"> <!-- Start of grid column -->
+            <img src="../Foton/DJI_MAVIC_2_PRO/DJI_15.jpg" class="photo img-fluid mb-3" alt="">
+            <img src="../Foton/DJI_MAVIC_2_PRO/DJI_18.jpg" class="photo img-fluid mb-3" alt="">
+            <img src="../Foton/DJI_MAVIC_2_PRO/DJI_19.jpg" class="photo img-fluid mb-3" alt="">
+          </div> <!-- End of grid column -->
 
-         <div class="col-lg-3 col-md-6 mb-3">  <!-- Start of grid column -->
-           <img src="../Foton/DJI_MAVIC_2_PRO/DJI_20.jpg" class="photo img-fluid mb-3" alt="">
-           <img src="../Foton/DJI_MAVIC_2_PRO/DJI_21.jpg" class="photo img-fluid mb-3" alt="">
-           <img src="../Foton/DJI_MAVIC_2_PRO/DJI_22.jpg" class="photo img-fluid mb-3" alt="">
-         </div>  <!-- End of grid column -->
-       
-         <div class="col-lg-3 col-md-6 mb-3"> <!-- Start of grid column -->
-           <img src="../Foton/DJI_MAVIC_2_PRO/DJI_23.jpg" class="photo img-fluid mb-3" alt="">
-           <img src="../Foton/DJI_MAVIC_2_PRO/DJI_24.jpg" class="photo img-fluid mb-3" alt="">
-           <img src="../Foton/DJI_MAVIC_2_PRO/DJI_25.jpg" class="photo img-fluid mb-3" alt="">
-         </div> <!-- End of grid column -->
+          <div class="col-lg-3 col-md-6 mb-3">  <!-- Start of grid column -->
+            <img src="../Foton/DJI_MAVIC_2_PRO/DJI_20.jpg" class="photo img-fluid mb-3" alt="">
+            <img src="../Foton/DJI_MAVIC_2_PRO/DJI_21.jpg" class="photo img-fluid mb-3" alt="">
+            <img src="../Foton/DJI_MAVIC_2_PRO/DJI_22.jpg" class="photo img-fluid mb-3" alt="">
+          </div>  <!-- End of grid column -->
+        
+          <div class="col-lg-3 col-md-6 mb-3"> <!-- Start of grid column -->
+            <img src="../Foton/DJI_MAVIC_2_PRO/DJI_23.jpg" class="photo img-fluid mb-3" alt="">
+            <img src="../Foton/DJI_MAVIC_2_PRO/DJI_24.jpg" class="photo img-fluid mb-3" alt="">
+            <img src="../Foton/DJI_MAVIC_2_PRO/DJI_25.jpg" class="photo img-fluid mb-3" alt="">
+          </div> <!-- End of grid column -->
 
-         <div class="col-lg-3 col-md-6 mb-3"> <!-- Start of grid column -->
-           <img src="../Foton/DJI_MAVIC_2_PRO/DJI_27.jpg" class="photo img-fluid mb-3" alt="">
-           <img src="../Foton/DJI_MAVIC_2_PRO/DJI_28.jpg" class="photo img-fluid mb-3" alt="">
-           <img src="../Foton/DJI_MAVIC_2_PRO/DJI_29.jpg" class="photo img-fluid mb-3" alt="">
-         </div> <!-- End of grid column -->
-       </div> <!-- Grid row end -->
-     </div> <!-- #####  End of page 1 #####-->
+          <div class="col-lg-3 col-md-6 mb-3"> <!-- Start of grid column -->
+            <img src="../Foton/DJI_MAVIC_2_PRO/DJI_27.jpg" class="photo img-fluid mb-3" alt="">
+            <img src="../Foton/DJI_MAVIC_2_PRO/DJI_28.jpg" class="photo img-fluid mb-3" alt="">
+            <img src="../Foton/DJI_MAVIC_2_PRO/DJI_29.jpg" class="photo img-fluid mb-3" alt="">
+          </div> <!-- End of grid column -->
+        </div> <!-- Grid row end -->
+      </div> <!-- #####  End of page 1 #####-->
 
-     <div id="page2" class="page"> <!--##### Start of page 2 ##### -->
-       <div class="row"> <!-- Grid row start -->
-         <div class="col-lg-3 col-md-12 mb-3"> <!-- Start of grid column -->
-           <img src="../Foton/DJI_MAVIC_2_PRO/DJI_30.jpg" class="photo img-fluid mb-3" alt="">
-           <img src="../Foton/DJI_MAVIC_2_PRO/DJI_31.jpg" class="photo img-fluid mb-3" alt="">
-           <img src="../Foton/DJI_MAVIC_2_PRO/DJI_32.jpg" class="photo img-fluid mb-3" alt="">
-         </div> <!-- End of grid column -->
+      <div id="page2" class="page"> <!--##### Start of page 2 ##### -->
+        <div class="row"> <!-- Grid row start -->
+          <div class="col-lg-3 col-md-12 mb-3"> <!-- Start of grid column -->
+            <img src="../Foton/DJI_MAVIC_2_PRO/DJI_30.jpg" class="photo img-fluid mb-3" alt="">
+            <img src="../Foton/DJI_MAVIC_2_PRO/DJI_31.jpg" class="photo img-fluid mb-3" alt="">
+            <img src="../Foton/DJI_MAVIC_2_PRO/DJI_32.jpg" class="photo img-fluid mb-3" alt="">
+          </div> <!-- End of grid column -->
 
-         <div class="col-lg-3 col-md-6 mb-3">  <!-- Start of grid column -->
-           <img src="../Foton/DJI_MAVIC_2_PRO/DJI_33.jpg" class="photo img-fluid mb-3" alt="">
-           <img src="../Foton/DJI_MAVIC_2_PRO/DJI_34.jpg" class="photo img-fluid mb-3" alt="">
-           <img src="../Foton/DJI_MAVIC_2_PRO/DJI_35.jpg" class="photo img-fluid mb-3" alt="">
-         </div>  <!-- End of grid column -->
-       
-         <div class="col-lg-3 col-md-6 mb-3"> <!-- Start of grid column -->
-           <img src="../Foton/DJI_MAVIC_2_PRO/DJI_36.jpg" class="photo img-fluid mb-3" alt="">
-           <img src="../Foton/DJI_MAVIC_2_PRO/DJI_37.jpg" class="photo img-fluid mb-3" alt="">
-           <img src="../Foton/DJI_MAVIC_2_PRO/DJI_38.jpg" class="photo img-fluid mb-3" alt="">
-         </div> <!-- End of grid column -->
+          <div class="col-lg-3 col-md-6 mb-3">  <!-- Start of grid column -->
+            <img src="../Foton/DJI_MAVIC_2_PRO/DJI_33.jpg" class="photo img-fluid mb-3" alt="">
+            <img src="../Foton/DJI_MAVIC_2_PRO/DJI_34.jpg" class="photo img-fluid mb-3" alt="">
+            <img src="../Foton/DJI_MAVIC_2_PRO/DJI_35.jpg" class="photo img-fluid mb-3" alt="">
+          </div>  <!-- End of grid column -->
+        
+          <div class="col-lg-3 col-md-6 mb-3"> <!-- Start of grid column -->
+            <img src="../Foton/DJI_MAVIC_2_PRO/DJI_36.jpg" class="photo img-fluid mb-3" alt="">
+            <img src="../Foton/DJI_MAVIC_2_PRO/DJI_37.jpg" class="photo img-fluid mb-3" alt="">
+            <img src="../Foton/DJI_MAVIC_2_PRO/DJI_38.jpg" class="photo img-fluid mb-3" alt="">
+          </div> <!-- End of grid column -->
 
-         <div class="col-lg-3 col-md-6 mb-3"> <!-- Start of grid column -->
-           <img src="../Foton/DJI_MAVIC_2_PRO/DJI_39.jpg" class="photo img-fluid mb-3" alt="">
-           <img src="../Foton/DJI_MAVIC_2_PRO/DJI_40.jpg" class="photo img-fluid mb-3" alt="">
-           <img src="../Foton/DJI_MAVIC_2_PRO/DJI_41.jpg" class="photo img-fluid mb-3" alt="">
-         </div> <!-- End of grid column -->
-       </div> <!-- Grid row end -->
+          <div class="col-lg-3 col-md-6 mb-3"> <!-- Start of grid column -->
+            <img src="../Foton/DJI_MAVIC_2_PRO/DJI_39.jpg" class="photo img-fluid mb-3" alt="">
+            <img src="../Foton/DJI_MAVIC_2_PRO/DJI_40.jpg" class="photo img-fluid mb-3" alt="">
+            <img src="../Foton/DJI_MAVIC_2_PRO/DJI_41.jpg" class="photo img-fluid mb-3" alt="">
+          </div> <!-- End of grid column -->
+        </div> <!-- Grid row end -->
 
-       <div class="row"> <!-- Grid row start -->
-         <div class="col-lg-3 col-md-12 mb-3"> <!-- Start of grid column -->
-           <img src="../Foton/DJI_MAVIC_2_PRO/DJI_42.jpg" class="photo img-fluid mb-3" alt="">
-           <img src="../Foton/CANON_EOS_90D/IMG_1558.JPG" class="photo img-fluid mb-3" alt="">
-           <img src="../Foton/CANON_EOS_90D/IMG_1704.JPG" class="photo img-fluid mb-3" alt="">
-         </div> <!-- End of grid column -->
+        <div class="row"> <!-- Grid row start -->
+          <div class="col-lg-3 col-md-12 mb-3"> <!-- Start of grid column -->
+            <img src="../Foton/DJI_MAVIC_2_PRO/DJI_42.jpg" class="photo img-fluid mb-3" alt="">
+            <img src="../Foton/CANON_EOS_90D/IMG_1558.JPG" class="photo img-fluid mb-3" alt="">
+            <img src="../Foton/CANON_EOS_90D/IMG_1704.JPG" class="photo img-fluid mb-3" alt="">
+          </div> <!-- End of grid column -->
 
-         <div class="col-lg-3 col-md-6 mb-3">  <!-- Start of grid column -->
-           <img src="../Foton/CANON_EOS_90D/IMG_1705.JPG" class="photo img-fluid mb-3" alt="">
-           <img src="../Foton/CANON_EOS_90D/IMG_1706.JPG" class="photo img-fluid mb-3" alt="">
-           <img src="../Foton/CANON_EOS_90D/IMG_1707.JPG" class="photo img-fluid mb-3" alt="">
-         </div>  <!-- End of grid column -->
-       
-         <div class="col-lg-3 col-md-6 mb-3"> <!-- Start of grid column -->
-           <img src="../Foton/CANON_EOS_90D/IMG_1709.JPG" class="photo img-fluid mb-3" alt="">
-           <img src="../Foton/CANON_EOS_90D/IMG_1711.JPG" class="photo img-fluid mb-3" alt="">
-           <img src="../Foton/CANON_EOS_90D/IMG_1713.JPG" class="photo img-fluid mb-3" alt="">
-         </div> <!-- End of grid column -->
+          <div class="col-lg-3 col-md-6 mb-3">  <!-- Start of grid column -->
+            <img src="../Foton/CANON_EOS_90D/IMG_1705.JPG" class="photo img-fluid mb-3" alt="">
+            <img src="../Foton/CANON_EOS_90D/IMG_1706.JPG" class="photo img-fluid mb-3" alt="">
+            <img src="../Foton/CANON_EOS_90D/IMG_1707.JPG" class="photo img-fluid mb-3" alt="">
+          </div>  <!-- End of grid column -->
+        
+          <div class="col-lg-3 col-md-6 mb-3"> <!-- Start of grid column -->
+            <img src="../Foton/CANON_EOS_90D/IMG_1709.JPG" class="photo img-fluid mb-3" alt="">
+            <img src="../Foton/CANON_EOS_90D/IMG_1711.JPG" class="photo img-fluid mb-3" alt="">
+            <img src="../Foton/CANON_EOS_90D/IMG_1713.JPG" class="photo img-fluid mb-3" alt="">
+          </div> <!-- End of grid column -->
 
-         <div class="col-lg-3 col-md-6 mb-3"> <!-- Start of grid column -->
-           <img src="../Foton/CANON_EOS_90D/IMG_1715.JPG" class="photo img-fluid mb-3" alt="">
-           <img src="../Foton/CANON_EOS_90D/IMG_1716.JPG" class="photo img-fluid mb-3" alt="">
-           <img src="../Foton/CANON_EOS_90D/IMG_1718.JPG" class="photo img-fluid mb-3" alt="">
-         </div> <!-- End of grid column -->
-       </div> <!-- Grid row end -->
-     </div> <!-- #####  End of page 2 #####-->
+          <div class="col-lg-3 col-md-6 mb-3"> <!-- Start of grid column -->
+            <img src="../Foton/CANON_EOS_90D/IMG_1715.JPG" class="photo img-fluid mb-3" alt="">
+            <img src="../Foton/CANON_EOS_90D/IMG_1716.JPG" class="photo img-fluid mb-3" alt="">
+            <img src="../Foton/CANON_EOS_90D/IMG_1718.JPG" class="photo img-fluid mb-3" alt="">
+          </div> <!-- End of grid column -->
+        </div> <!-- Grid row end -->
+      </div> <!-- #####  End of page 2 #####-->
 
-     <div id="page3" class="page"> <!--##### Start of page 3 ##### -->
-       <div class="row"> <!-- Grid row start -->
-         <div class="col-lg-3 col-md-12 mb-3"> <!-- Start of grid column -->
-           <img src="../Foton/CANON_EOS_90D/IMG_1720.JPG" class="photo img-fluid mb-3" alt="">
-           <img src="../Foton/CANON_EOS_90D/IMG_1721.JPG" class="photo img-fluid mb-3" alt="">
-           <img src="../Foton/CANON_EOS_90D/IMG_1722.JPG" class="photo img-fluid mb-3" alt="">
-         </div> <!-- End of grid column -->
+      <div id="page3" class="page"> <!--##### Start of page 3 ##### -->
+        <div class="row"> <!-- Grid row start -->
+          <div class="col-lg-3 col-md-12 mb-3"> <!-- Start of grid column -->
+            <img src="../Foton/CANON_EOS_90D/IMG_1720.JPG" class="photo img-fluid mb-3" alt="">
+            <img src="../Foton/CANON_EOS_90D/IMG_1721.JPG" class="photo img-fluid mb-3" alt="">
+            <img src="../Foton/CANON_EOS_90D/IMG_1722.JPG" class="photo img-fluid mb-3" alt="">
+          </div> <!-- End of grid column -->
 
-         <div class="col-lg-3 col-md-6 mb-3">  <!-- Start of grid column -->
-           <img src="../Foton/CANON_EOS_90D/IMG_1726.JPG" class="photo img-fluid mb-3" alt="">
-           <img src="../Foton/CANON_EOS_90D/IMG_1729.JPG" class="photo img-fluid mb-3" alt="">
-           <img src="../Foton/CANON_EOS_90D/IMG_1731.JPG" class="photo img-fluid mb-3" alt="">
-         </div>  <!-- End of grid column -->
-       
-         <div class="col-lg-3 col-md-6 mb-3"> <!-- Start of grid column -->
-           <img src="../Foton/CANON_EOS_90D/IMG_1732.JPG" class="photo img-fluid mb-3" alt="">
-           <img src="../Foton/CANON_EOS_90D/IMG_1737.JPG" class="photo img-fluid mb-3" alt="">
-           <img src="../Foton/CANON_EOS_90D/IMG_1738.JPG" class="photo img-fluid mb-3" alt="">
-         </div> <!-- End of grid column -->
+          <div class="col-lg-3 col-md-6 mb-3">  <!-- Start of grid column -->
+            <img src="../Foton/CANON_EOS_90D/IMG_1726.JPG" class="photo img-fluid mb-3" alt="">
+            <img src="../Foton/CANON_EOS_90D/IMG_1729.JPG" class="photo img-fluid mb-3" alt="">
+            <img src="../Foton/CANON_EOS_90D/IMG_1731.JPG" class="photo img-fluid mb-3" alt="">
+          </div>  <!-- End of grid column -->
+        
+          <div class="col-lg-3 col-md-6 mb-3"> <!-- Start of grid column -->
+            <img src="../Foton/CANON_EOS_90D/IMG_1732.JPG" class="photo img-fluid mb-3" alt="">
+            <img src="../Foton/CANON_EOS_90D/IMG_1737.JPG" class="photo img-fluid mb-3" alt="">
+            <img src="../Foton/CANON_EOS_90D/IMG_1738.JPG" class="photo img-fluid mb-3" alt="">
+          </div> <!-- End of grid column -->
 
-         <div class="col-lg-3 col-md-6 mb-3"> <!-- Start of grid column -->
-           <img src="../Foton/CANON_EOS_90D/IMG_1740.JPG" class="photo img-fluid mb-3" alt="">
-           <img src="../Foton/CANON_EOS_90D/IMG_1748.JPG" class="photo img-fluid mb-3" alt="">
-           <img src="../Foton/CANON_EOS_90D/IMG_1744.JPG" class="photo img-fluid mb-3" alt="">
-         </div> <!-- End of grid column -->
-       </div> <!-- Grid row end -->
-     </div> <!-- #####  End of page 3 #####-->
-
-     <div id="page4" class="page">
-       <div>
-         <h4 id="linkHeading">Here below are some usefull links that has been used to create this project.</h4>
-       </div>
-       <div class="extLinks">
-         <ul class="linkList">
-           <li>Bootstrap 5.0 - <a href="https://getbootstrap.com">bootstrap.com</a></li><br>
-           <li>Material Design Color Tool - <a href="https://material.io/resources/color/#!/?view.left=0&view.right=0">material.io/resources/color</a></li><br>
-           <li>Github repo - <a href="https://github.com/a19frelu/Examensarbete_HIS_2022">github.com/a19frelu/Examensarbete_HIS_2022</a></li><br>
-           <li>Licens - <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons-licens" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Erkännande 4.0 Internationell Licens</a>.</li>
-         </ul>
-       </div>
-     </div>
-
-     <div id="page5" class="page">
-       <p class="aboutText">This light weight website works like an artefact which is build as a <span class="SPA">SPA</span> or <span class="SPA">Single-page application </span>to demonstrate the functions and behavior in comparison with other types of webb applications.</p>
-     </div>
-
-     <div id="page6" class="page">
-       <h1>Photo licenses will be shown here in a moment.</h1>
-     </div>
-   </div> <!--##### Start of container ##### --> 
+          <div class="col-lg-3 col-md-6 mb-3"> <!-- Start of grid column -->
+            <img src="../Foton/CANON_EOS_90D/IMG_1740.JPG" class="photo img-fluid mb-3" alt="">
+            <img src="../Foton/CANON_EOS_90D/IMG_1748.JPG" class="photo img-fluid mb-3" alt="">
+            <img src="../Foton/CANON_EOS_90D/IMG_1744.JPG" class="photo img-fluid mb-3" alt="">
+          </div> <!-- End of grid column -->
+        </div> <!-- Grid row end -->
+      </div> <!-- #####  End of page 3 #####-->
+    </div> <!--##### Start of container ##### --> 
 
    <!-- Bootstrap Bundle with Popper -->
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

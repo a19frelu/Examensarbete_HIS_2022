@@ -12,7 +12,7 @@
     console.log("Sida ett visas på inladdning.")
     }
     function init () {
-        showPage (4);
+        showPage (1);
     }
 
     function hidePagination() {
@@ -31,4 +31,4 @@
         } else {
             pShow.style.display = "none";
         }
-    } 
+    }
