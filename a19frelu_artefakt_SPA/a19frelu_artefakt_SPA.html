@@ -37,6 +37,9 @@
       .top_batch {
         padding-top: 25px;
         padding-bottom: 20px;
+        font-family: 'Brush Script MT', cursive;
+        font-size: 40px;
+        text-decoration: underline;
       }
       .nav-link {
         color: rgb(255, 255, 255);
@@ -105,20 +108,42 @@
         }
         // Show the selected page
         document.getElementById("page"+p).style.display="block";
-
-        console.log("Sida ett visas på inladdning.")
       }
 
       // Hide pagination buttons when navigating away from art page
 
-      // function hidePagination() {
-      //   var pHide = document.getElementById("footContainer");
-      //   if (pHide.style.display === "block") {
-      //     pHide.style.display = "none";
+      // Fungerar tydligen inte
+      // const togglePagination = document.querySelector('.pagiHide');
+      // const pagination = document.querySelector('#footContainer');
+
+      // togglePagination.addEventListener('click', () => {
+      //   if(pagination.style.display === 'block') {
+      //     pagination.style.display = 'none';
       //   } else {
-      //     pHide.style.display = "none";
+      //     pagination.style.display = 'block';
+      //   }
+      // });
+
+      // function hidePagination() {
+      //   var pagination = document.getElementById("footContainer");
+      //   if (pagination.style.display === "block") {
+      //     pagination.style.display = "none";
+      //   } else {
+      //     pagination.style.display = "none";
       //   }
       // }
+
+      function hidePagination() {
+        var pagination = document.getElementById("footContainer");
+        pagination.style.display = "none";
+        console.log('hidePagination aktiverad');
+      }
+
+      function showPagination() {
+        var pagination = document.getElementById('footContainer');
+        pagination.style.display = 'block';
+        console.log('showPagination aktiverad!');
+      }
 
       // $(document).ready(function(){
       //   $(".pagiHide").click(function(){
@@ -160,20 +185,20 @@
      <!--*  ########################## ------------------------ Bootstrap navbar ------------------------ ########################## -->
      <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
-        <!--*  <a class="navbar-brand" href="#">Navbar</a> -->
+         <a class="navbar-brand" href="#">Navbar</a>
         <button class="navbar-toggler navbar-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active pagiShow" aria-current="page" onclick="showPage(1)" href="#Art">Art</a>
+              <a class="nav-link active" aria-current="page" onclick="showPage(1); showPagination()" href="#Art">Art</a>
             </li>
-            <li class="nav-item pagiHide">
-              <a class="nav-link" onclick="showPage(4)" href="#Links">Links & license</a>
+            <li class="nav-item">
+              <a class="nav-link pagiHide" onclick="showPage(4); hidePagination()" href="#Links">Links & license</a>
             </li>
-            <li class="nav-item pagiHide">
-              <a class="nav-link" onclick="showPage(5)" href="#About">About</a>
+            <li class="nav-item">
+              <a class="nav-link pagiHide" onclick="showPage(5); hidePagination()" href="#About">About</a>
             </li>
           </ul>
         </div>
@@ -356,9 +381,9 @@
     <div id="footContainer">
       <nav aria-label="Page navigation example">
         <ul class="pagination justify-content-center" style="background-color:#3F51B5;">
-          <li class="page-item" onclick="showPage(1);" goToTop();"><a class="page-link">1</a></li>
-          <li class="page-item" onclick="showPage(2);" goToTop();"><a class="page-link">2</a></li>
-          <li class="page-item" onclick="showPage(3);"><a class="page-link">3</a></li>
+          <li class="page-item" onclick="showPage(1); goToTop();"><a class="page-link">1</a></li>
+          <li class="page-item" onclick="showPage(2); goToTop();"><a class="page-link">2</a></li>
+          <li class="page-item" onclick="showPage(3); goToTop();"><a class="page-link">3</a></li>
         </ul>
       </nav>
     </div>
