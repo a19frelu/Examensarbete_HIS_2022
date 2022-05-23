@@ -111,69 +111,25 @@
       }
 
       // Hide pagination buttons when navigating away from art page
-
-      // Fungerar tydligen inte
-      // const togglePagination = document.querySelector('.pagiHide');
-      // const pagination = document.querySelector('#footContainer');
-
-      // togglePagination.addEventListener('click', () => {
-      //   if(pagination.style.display === 'block') {
-      //     pagination.style.display = 'none';
-      //   } else {
-      //     pagination.style.display = 'block';
-      //   }
-      // });
-
-      // function hidePagination() {
-      //   var pagination = document.getElementById("footContainer");
-      //   if (pagination.style.display === "block") {
-      //     pagination.style.display = "none";
-      //   } else {
-      //     pagination.style.display = "none";
-      //   }
-      // }
-
       function hidePagination() {
         var pagination = document.getElementById("footContainer");
         pagination.style.display = "none";
         console.log('hidePagination aktiverad');
       }
 
+      // Show pagination buttons when navigating away from art page
       function showPagination() {
         var pagination = document.getElementById('footContainer');
         pagination.style.display = 'block';
         console.log('showPagination aktiverad!');
       }
-
-      // $(document).ready(function(){
-      //   $(".pagiHide").click(function(){
-      //     $(".page-item").hide();
-      //   });
-      //   $(".pagiShow").click(function(){
-      //     $(".page-item").show();
-      //   });
-      // });
-
-
-      //* Nu ska vi se
-
-
-      // Show pagination buttons when navigating away from art page
-
-      // function showPagination() {
-      //   var pShow = document.getElementById("footContainer");
-      //   if (pShow.style.display === "none") {
-      //     pShow.style.display = "block";
-      //   } else {
-      //     pShow.style.display = "none";
-      //   }
-      // }
       
       // Scrolling to top of page
       function goToTop() {
         window.scrollTo(0, 0);
       }
 
+      // Function that initiates when page loads first time
       function init() {
         showPage (1);
       }
