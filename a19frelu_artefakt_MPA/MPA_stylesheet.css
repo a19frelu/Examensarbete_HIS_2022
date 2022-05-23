@@ -20,7 +20,7 @@ h1 {
   padding-top: 90px;
 }
 #aboutHeading {
-padding-top: 90px;
+  padding-top: 90px;
 }
 .top_batch {
   padding-top: 25px;
@@ -67,11 +67,15 @@ a {
   color: #002984;
 }
 .SPA {
-color: bisque;
+  color: bisque;
+}
+#page5 {
+  align-items: center;
+  text-align: center;
 }
 .aboutText {
-  margin-left: 200px;
-  margin-right: 200px;
+  margin: auto;
+  width: 80%;
   padding-top: 100px;
   padding-bottom: 100px;
   font-size: large;
@@ -80,5 +84,5 @@ color: bisque;
   margin-top: 50px;
 }
 .pagination {
-margin-bottom: 50px;
+  margin-bottom: 50px;
 }
