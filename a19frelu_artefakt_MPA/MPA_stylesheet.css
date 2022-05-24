@@ -5,6 +5,7 @@ body {
 .navbar {
   align-items: center;
   background-color: #002984;
+  box-shadow: 0 0 10px 2px black;
 }
 .navbar-toggler {
   background-color: #8292fa;
@@ -85,4 +86,8 @@ a {
 }
 .pagination {
   margin-bottom: 50px;
+}
+.page-link:hover {
+  transform: scale(1.1);
+  background-color: lightgray;
 }

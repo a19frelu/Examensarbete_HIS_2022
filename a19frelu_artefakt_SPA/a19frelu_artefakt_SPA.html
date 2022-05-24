@@ -17,6 +17,7 @@
       .navbar {
         align-items: center;
         background-color: #002984;
+        box-shadow: 0 0 10px 2px black;
       }
       .navbar-toggler {
         background-color: #8292fa;
@@ -86,7 +87,7 @@
         width: 80%;
         padding-top: 100px;
         padding-bottom: 100px;
-        font-size: large;
+        font-size: x-large;
       }
       #footContainer {
         margin-top: 50px;
@@ -94,11 +95,37 @@
       .pagination {
       margin-bottom: 50px;
       }
+      .page-link:hover {
+        transform: scale(1.1);
+        background-color: lightgray;
+
+      }
       
     </style>
 
     <script type="text/javascript">
-      
+
+      /*
+        *********************************   Fetch API method to asynchronous change the pages of the application   ***************************************
+      */
+
+
+      fetch('fetchAPI_testFile_1')
+      .then(data => {
+        return data.json();
+        })
+        .then(post => {
+          console.log(post.title)
+        });
+
+      // var test1 = fetch('fetchAPI_testFile_1');
+
+      // function addPage1() {
+      //   document.getElementById('testPage1').innerHTML += test1;
+      //   console.log('extraknappen är klickad')
+      // }
+
+
       function showPage(p){
         // Hide all pages
         pageArr=document.getElementsByClassName("page");
@@ -151,11 +178,14 @@
               <a class="nav-link active" aria-current="page" onclick="showPage(1); showPagination()" href="#Art">Art</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link pagiHide" onclick="showPage(4); hidePagination()" href="#Links">Links & license</a>
+              <a class="nav-link" onclick="showPage(4); hidePagination()" href="#Links">Links & license</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link pagiHide" onclick="showPage(5); hidePagination()" href="#About">About</a>
+              <a class="nav-link" onclick="showPage(5); hidePagination()" href="#About">About</a>
             </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link" onclick="addPage1();" href="#About">extraTestSida</a>
+            </li> -->
           </ul>
         </div>
       </div>
@@ -166,6 +196,10 @@
       <div id="page1" class="page"> <!--* ##### Start of page 1 ##### -->
 
         <h4 class="top_batch">Welcome to the gallery of photos</h4>
+
+        <div id="testPage1">
+
+        </div>
   
         <div class="row"> <!--* Grid row start -->
           <div class="col-lg-3 col-md-12 mb-3"> <!--* Start of grid column -->
@@ -323,7 +357,7 @@
       </div><!--* #####  End of page 4 #####-->
 
       <div id="page5" class="page"> <!--* ##### Start of page 5 ##### -->
-        <h3 id="aboutHeading">About:</h3>
+        <h2 id="aboutHeading">About:</h2>
         <p class="aboutText">This light weight website works like an artefact which is build as a <span class="SPA">SPA</span> or <span class="SPA">Single-page application </span>to demonstrate the functions and behavior in comparison with other types of webb applications.</p>
       </div> <!--* #####  End of page 5 #####-->
     </div>
