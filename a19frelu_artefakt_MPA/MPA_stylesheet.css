@@ -10,19 +10,17 @@ body {
 .navbar-toggler {
   background-color: #8292fa;
 }
+
 .container {
   background-color: #8292fa;
   border-radius: 0px 0px 20px 20px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-h1 {
-  color: rgb(61, 209, 61);
-}
 #linkHeading {
   padding-top: 90px;
 }
 #aboutHeading {
-  padding-top: 90px;
+padding-top: 90px;
 }
 .top_batch {
   padding-top: 25px;
@@ -36,11 +34,6 @@ h1 {
   font-size: xx-large;
   margin-right: 20px;
   margin-left: 20px;
-}
-.page-item {
-  padding: 15px;
-  border-radius: 50px;
-  cursor: pointer;
 }
 .photo {
   transition: all 0.2s ease;
@@ -70,11 +63,7 @@ a {
   color: #002984;
 }
 .SPA {
-  color: bisque;
-}
-#page5 {
-  align-items: center;
-  text-align: center;
+color: bisque;
 }
 .aboutText {
   margin: auto;
@@ -83,11 +72,17 @@ a {
   padding-bottom: 100px;
   font-size: x-large;
 }
+
 #footContainer {
   margin-top: 50px;
 }
 .pagination {
-  margin-bottom: 50px;
+margin-bottom: 50px;
+}
+.page-item {
+  padding: 15px;
+  border-radius: 50px;
+  cursor: pointer;
 }
 .page-link:hover {
   transform: scale(1.1);

@@ -1,7 +1,0 @@
-<html>
-    <body>
-        <div style="border: #ff0000 dotted; align-items: center; text-align: center; margin-top: 400px;">
-            <p>This is test number TWO for Fetch API get method</p>
-        </div>
-    </body>
-</html>

@@ -1,5 +1,5 @@
-<!DOCTYPE html>
 <html lang="en">
+  <!DOCTYPE html>
   <head>
     <!--  Required meta tags -->
     <meta charset="utf-8">
@@ -22,13 +22,11 @@
       .navbar-toggler {
         background-color: #8292fa;
       }
+
       .container {
         background-color: #8292fa;
         border-radius: 0px 0px 20px 20px;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-      }
-      h1 {
-        color: rgb(61, 209, 61);
       }
       #linkHeading {
         padding-top: 90px;
@@ -48,11 +46,6 @@
         font-size: xx-large;
         margin-right: 20px;
         margin-left: 20px;
-      }
-      .page-item {
-        padding: 15px;
-        border-radius: 50px;
-        cursor: pointer;
       }
       .photo {
         transition: all 0.2s ease;
@@ -91,11 +84,17 @@
         padding-bottom: 100px;
         font-size: x-large;
       }
+
       #footContainer {
         margin-top: 50px;
       }
       .pagination {
       margin-bottom: 50px;
+      }
+      .page-item {
+        padding: 15px;
+        border-radius: 50px;
+        cursor: pointer;
       }
       .page-link:hover {
         transform: scale(1.1);
@@ -106,36 +105,15 @@
 
     <script type="text/javascript">
 
-      /*
-        *********************************   Fetch API method to asynchronous change the pages of the application   ***************************************
-      */
-
-
-      fetch('fetchAPI_testFile_1')
-      .then(data => {
-        return data.json();
-        })
-        .then(post => {
-          console.log(post.title)
-        });
-
-      // var test1 = fetch('fetchAPI_testFile_1');
-
-      // function addPage1() {
-      //   document.getElementById('testPage1').innerHTML += test1;
-      //   console.log('extraknappen är klickad')
-      // }
-
-
+      // Fetch API method to asynchronous change the pages of the application
       function showPage(p){
-        // Hide all pages
-        pageArr=document.getElementsByClassName("page");
-        for(let i=0;i<pageArr.length;i++){
-          let page=pageArr[i];
-          page.style.display="none";
-        }
-        // Show the selected page
-        document.getElementById("page"+p).style.display="block";
+        fetch(`${p}.html`)
+        .then(function (response){
+          return response.text();
+        })
+        .then(function (html) {
+          document.getElementById('container').innerHTML = html;
+        })
       }
 
       // Hide pagination buttons when navigating away from art page
@@ -166,8 +144,7 @@
 
   </head>
   <body onload="init();">
-     <!--*  ########################## ------------------------ Bootstrap navbar ------------------------ ########################## -->
-     <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg"> <!--*  ########################## ------------------------ Bootstrap navbar start ------------------------ ########################## -->
       <div class="container-fluid">
         <a class="navbar-brand" href="#">Navbar</a>
         <button class="navbar-toggler navbar-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -184,184 +161,15 @@
             <li class="nav-item">
               <a class="nav-link" onclick="showPage(5); hidePagination()" href="#About">About</a>
             </li>
-            <!-- <li class="nav-item">
-              <a class="nav-link" onclick="addPage1();" href="#About">extraTestSida</a>
-            </li> -->
           </ul>
         </div>
       </div>
-    </nav>
-    <!--*  ########################## ------------------------ Bootstrap navbar end --------------------- ########################## -->
+    </nav> <!--*  ########################## ------------------------ Bootstrap navbar end --------------------- ########################## -->
+
     
-    <div class="container"> <!--* ##### Start of container ##### -->
-      <div id="page1" class="page"> <!--* ##### Start of page 1 ##### -->
-
-        <h4 class="top_batch">Welcome to the gallery of photos</h4>
-
-        <div id="testPage1">
-
-        </div>
-  
-        <div class="row"> <!--* Grid row start -->
-          <div class="col-lg-3 col-md-12 mb-3"> <!--* Start of grid column -->
-            <img src="../Foton/DJI_MAVIC_2_PRO/DJI_2.jpg" class="photo img-fluid mb-3" alt="">
-            <img src="../Foton/DJI_MAVIC_2_PRO/DJI_3.jpg" class="photo img-fluid mb-3" alt="">
-            <img src="../Foton/DJI_MAVIC_2_PRO/DJI_4.jpg" class="photo img-fluid mb-3" alt="">
-          </div> <!--* End of grid column -->
-
-          <div class="col-lg-3 col-md-6 mb-3">  <!--* Start of grid column -->
-            <img src="../Foton/DJI_MAVIC_2_PRO/DJI_5.jpg" class="photo img-fluid mb-3" alt="">
-            <img src="../Foton/DJI_MAVIC_2_PRO/DJI_6.jpg" class="photo img-fluid mb-3" alt="">
-            <img src="../Foton/DJI_MAVIC_2_PRO/DJI_7.jpg" class="photo img-fluid mb-3" alt="">
-          </div>  <!--* End of grid column -->
-        
-          <div class="col-lg-3 col-md-6 mb-3"> <!--* Start of grid column -->
-            <img src="../Foton/DJI_MAVIC_2_PRO/DJI_8.jpg" class="photo img-fluid mb-3" alt="">
-            <img src="../Foton/DJI_MAVIC_2_PRO/DJI_9.jpg" class="photo img-fluid mb-3" alt="">
-            <img src="../Foton/DJI_MAVIC_2_PRO/DJI_10.jpg" class="photo img-fluid mb-3" alt="">
-          </div> <!--* End of grid column -->
-
-          <div class="col-lg-3 col-md-6 mb-3"> <!--* Start of grid column -->
-            <img src="../Foton/DJI_MAVIC_2_PRO/DJI_12.jpg" class="photo img-fluid mb-3" alt="">
-            <img src="../Foton/DJI_MAVIC_2_PRO/DJI_13.jpg" class="photo img-fluid mb-3" alt="">
-            <img src="../Foton/DJI_MAVIC_2_PRO/DJI_14.jpg" class="photo img-fluid mb-3" alt="">
-          </div> <!--* End of grid column -->
-        </div> <!--* Grid row end -->
-
-        <div class="row"> <!--*  Grid row start -->
-          <div class="col-lg-3 col-md-12 mb-3"> <!--* Start of grid column -->
-            <img src="../Foton/DJI_MAVIC_2_PRO/DJI_15.jpg" class="photo img-fluid mb-3" alt="">
-            <img src="../Foton/DJI_MAVIC_2_PRO/DJI_18.jpg" class="photo img-fluid mb-3" alt="">
-            <img src="../Foton/DJI_MAVIC_2_PRO/DJI_19.jpg" class="photo img-fluid mb-3" alt="">
-          </div> <!--* End of grid column -->
-
-          <div class="col-lg-3 col-md-6 mb-3">  <!--* Start of grid column -->
-            <img src="../Foton/DJI_MAVIC_2_PRO/DJI_20.jpg" class="photo img-fluid mb-3" alt="">
-            <img src="../Foton/DJI_MAVIC_2_PRO/DJI_21.jpg" class="photo img-fluid mb-3" alt="">
-            <img src="../Foton/DJI_MAVIC_2_PRO/DJI_22.jpg" class="photo img-fluid mb-3" alt="">
-          </div>  <!--* End of grid column -->
-        
-          <div class="col-lg-3 col-md-6 mb-3"> <!--* Start of grid column -->
-            <img src="../Foton/DJI_MAVIC_2_PRO/DJI_23.jpg" class="photo img-fluid mb-3" alt="">
-            <img src="../Foton/DJI_MAVIC_2_PRO/DJI_24.jpg" class="photo img-fluid mb-3" alt="">
-            <img src="../Foton/DJI_MAVIC_2_PRO/DJI_25.jpg" class="photo img-fluid mb-3" alt="">
-          </div> <!--* End of grid column -->
-
-          <div class="col-lg-3 col-md-6 mb-3"> <!--*  Start of grid column -->
-            <img src="../Foton/DJI_MAVIC_2_PRO/DJI_27.jpg" class="photo img-fluid mb-3" alt="">
-            <img src="../Foton/DJI_MAVIC_2_PRO/DJI_28.jpg" class="photo img-fluid mb-3" alt="">
-            <img src="../Foton/DJI_MAVIC_2_PRO/DJI_29.jpg" class="photo img-fluid mb-3" alt="">
-          </div> <!--* End of grid column -->
-        </div> <!--* Grid row end -->
-      </div> <!--* #####  End of page 1 #####-->
-
-      <div id="page2" class="page"> <!--* ##### Start of page 2 ##### -->
-
-        <h4 class="top_batch">Photo gallery page 2</h4>
-
-        <div class="row"> <!--* Grid row start -->
-          <div class="col-lg-3 col-md-12 mb-3"> <!--*  Start of grid column -->
-            <img src="../Foton/DJI_MAVIC_2_PRO/DJI_30.jpg" class="photo img-fluid mb-3" alt="">
-            <img src="../Foton/DJI_MAVIC_2_PRO/DJI_31.jpg" class="photo img-fluid mb-3" alt="">
-            <img src="../Foton/DJI_MAVIC_2_PRO/DJI_32.jpg" class="photo img-fluid mb-3" alt="">
-          </div> <!--* End of grid column -->
-
-          <div class="col-lg-3 col-md-6 mb-3">  <!--* Start of grid column -->
-            <img src="../Foton/DJI_MAVIC_2_PRO/DJI_33.jpg" class="photo img-fluid mb-3" alt="">
-            <img src="../Foton/DJI_MAVIC_2_PRO/DJI_34.jpg" class="photo img-fluid mb-3" alt="">
-            <img src="../Foton/DJI_MAVIC_2_PRO/DJI_35.jpg" class="photo img-fluid mb-3" alt="">
-          </div>  <!--* End of grid column -->
-        
-          <div class="col-lg-3 col-md-6 mb-3"> <!--* Start of grid column -->
-            <img src="../Foton/DJI_MAVIC_2_PRO/DJI_36.jpg" class="photo img-fluid mb-3" alt="">
-            <img src="../Foton/DJI_MAVIC_2_PRO/DJI_37.jpg" class="photo img-fluid mb-3" alt="">
-            <img src="../Foton/DJI_MAVIC_2_PRO/DJI_38.jpg" class="photo img-fluid mb-3" alt="">
-          </div> <!--* End of grid column -->
-
-          <div class="col-lg-3 col-md-6 mb-3"> <!--* Start of grid column -->
-            <img src="../Foton/DJI_MAVIC_2_PRO/DJI_39.jpg" class="photo img-fluid mb-3" alt="">
-            <img src="../Foton/DJI_MAVIC_2_PRO/DJI_40.jpg" class="photo img-fluid mb-3" alt="">
-            <img src="../Foton/DJI_MAVIC_2_PRO/DJI_41.jpg" class="photo img-fluid mb-3" alt="">
-          </div> <!--* End of grid column -->
-        </div> <!--* Grid row end -->
-
-        <div class="row"> <!--* Grid row start -->
-          <div class="col-lg-3 col-md-12 mb-3"> <!--* Start of grid column -->
-            <img src="../Foton/DJI_MAVIC_2_PRO/DJI_42.jpg" class="photo img-fluid mb-3" alt="">
-            <img src="../Foton/CANON_EOS_90D/IMG_1558.JPG" class="photo img-fluid mb-3" alt="">
-            <img src="../Foton/CANON_EOS_90D/IMG_1704.JPG" class="photo img-fluid mb-3" alt="">
-          </div> <!--* End of grid column -->
-
-          <div class="col-lg-3 col-md-6 mb-3">  <!--* Start of grid column -->
-            <img src="../Foton/CANON_EOS_90D/IMG_1705.JPG" class="photo img-fluid mb-3" alt="">
-            <img src="../Foton/CANON_EOS_90D/IMG_1706.JPG" class="photo img-fluid mb-3" alt="">
-            <img src="../Foton/CANON_EOS_90D/IMG_1707.JPG" class="photo img-fluid mb-3" alt="">
-          </div>  <!--* End of grid column -->
-        
-          <div class="col-lg-3 col-md-6 mb-3"> <!--* Start of grid column -->
-            <img src="../Foton/CANON_EOS_90D/IMG_1709.JPG" class="photo img-fluid mb-3" alt="">
-            <img src="../Foton/CANON_EOS_90D/IMG_1711.JPG" class="photo img-fluid mb-3" alt="">
-            <img src="../Foton/CANON_EOS_90D/IMG_1713.JPG" class="photo img-fluid mb-3" alt="">
-          </div> <!--* End of grid column -->
-
-          <div class="col-lg-3 col-md-6 mb-3"> <!--* Start of grid column -->
-            <img src="../Foton/CANON_EOS_90D/IMG_1715.JPG" class="photo img-fluid mb-3" alt="">
-            <img src="../Foton/CANON_EOS_90D/IMG_1716.JPG" class="photo img-fluid mb-3" alt="">
-            <img src="../Foton/CANON_EOS_90D/IMG_1718.JPG" class="photo img-fluid mb-3" alt="">
-          </div> <!--* End of grid column -->
-        </div> <!--* Grid row end -->
-      </div> <!--* #####  End of page 2 #####-->
-
-      <div id="page3" class="page"> <!--* ##### Start of page 3 ##### -->
-
-        <h4 class="top_batch">Photo gallery page 3</h4>
-
-        <div class="row"> <!--* Grid row start -->
-          <div class="col-lg-3 col-md-12 mb-3"> <!--*  Start of grid column -->
-            <img src="../Foton/CANON_EOS_90D/IMG_1720.JPG" class="photo img-fluid mb-3" alt="">
-            <img src="../Foton/CANON_EOS_90D/IMG_1721.JPG" class="photo img-fluid mb-3" alt="">
-            <img src="../Foton/CANON_EOS_90D/IMG_1722.JPG" class="photo img-fluid mb-3" alt="">
-          </div> <!--* End of grid column -->
-
-          <div class="col-lg-3 col-md-6 mb-3">  <!--* Start of grid column -->
-            <img src="../Foton/CANON_EOS_90D/IMG_1726.JPG" class="photo img-fluid mb-3" alt="">
-            <img src="../Foton/CANON_EOS_90D/IMG_1729.JPG" class="photo img-fluid mb-3" alt="">
-            <img src="../Foton/CANON_EOS_90D/IMG_1731.JPG" class="photo img-fluid mb-3" alt="">
-          </div>  <!--* End of grid column -->
-        
-          <div class="col-lg-3 col-md-6 mb-3"> <!--* Start of grid column -->
-            <img src="../Foton/CANON_EOS_90D/IMG_1732.JPG" class="photo img-fluid mb-3" alt="">
-            <img src="../Foton/CANON_EOS_90D/IMG_1737.JPG" class="photo img-fluid mb-3" alt="">
-            <img src="../Foton/CANON_EOS_90D/IMG_1738.JPG" class="photo img-fluid mb-3" alt="">
-          </div> <!--* End of grid column -->
-
-          <div class="col-lg-3 col-md-6 mb-3"> <!--* Start of grid column -->
-            <img src="../Foton/CANON_EOS_90D/IMG_1740.JPG" class="photo img-fluid mb-3" alt="">
-            <img src="../Foton/CANON_EOS_90D/IMG_1748.JPG" class="photo img-fluid mb-3" alt="">
-            <img src="../Foton/CANON_EOS_90D/IMG_1744.JPG" class="photo img-fluid mb-3" alt="">
-          </div> <!--* End of grid column -->
-        </div> <!--* Grid row end -->
-      </div> <!--* #####  End of page 3 #####-->
-
-      <div id="page4" class="page"><!--* ##### Start of page 4 ##### -->
-        <div>
-          <h4 id="linkHeading">Here below are some usefull links that has been used to create this project.</h4>
-        </div>
-        <div class="extLinks">
-          <ul class="linkList">
-            <li>Bootstrap 5.0 - <a href="https://getbootstrap.com">bootstrap.com</a></li><br>
-            <li>Material Design Color Tool - <a href="https://material.io/resources/color/#!/?view.left=0&view.right=0">material.io/resources/color</a></li><br>
-            <li>Github repo - <a href="https://github.com/a19frelu/Examensarbete_HIS_2022">github.com/a19frelu/Examensarbete_HIS_2022</a></li><br>
-            <li>Licens - <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons-licens" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Erkännande 4.0 Internationell Licens</a>.</li>
-          </ul>
-        </div>
-      </div><!--* #####  End of page 4 #####-->
-
-      <div id="page5" class="page"> <!--* ##### Start of page 5 ##### -->
-        <h2 id="aboutHeading">About:</h2>
-        <p class="aboutText">This light weight website works like an artefact which is build as a <span class="SPA">SPA</span> or <span class="SPA">Single-page application </span>to demonstrate the functions and behavior in comparison with other types of webb applications.</p>
-      </div> <!--* #####  End of page 5 #####-->
-    </div>
+    <div id="container" class="container"> <!--* ##### Start of container ##### -->
+      <!--? asynchronous fetching resources here-->
+    </div><!--* ##### End of container ##### -->
 
     <!--  Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
